@@ -32,8 +32,8 @@ def get_image(date,unicode1,unicode2):
         print("THE FACTORY IS DONE COMBINING !!!")
 
 def main():
-    first=input("[DONT USE SPACES] \nFirst emoji: ")
-    second=input("Second emoji: ")
+    first=input("First emoji: ").strip()
+    second=input("Second emoji: ").strip()
     data=load_data()
     unicode1, unicode2, date = extract_date(first, second, data)
     get_image(date, unicode1, unicode2)
